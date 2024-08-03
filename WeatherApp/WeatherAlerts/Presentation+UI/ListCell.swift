@@ -1,6 +1,6 @@
 import UIKit
 
-class AlertCellView: UITableViewCell {
+final class AlertCellView: UITableViewCell {
     lazy var eventLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

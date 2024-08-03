@@ -1,7 +1,6 @@
 import Foundation
 
 final class WeatherAlertsViewModel {
-    
     var weatherEvents: [WeatherData.WeatherEvent] = []
     private let weatherService: WeatherService
     private let interval: Date? = .now

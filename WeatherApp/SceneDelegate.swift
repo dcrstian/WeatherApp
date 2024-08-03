@@ -12,7 +12,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: scene)
-        let webservice = WeatherHTTPService()  // Or use any other implementation
+        let networkClient = NetworkingClient()
+        let webservice = WeatherHTTPService(networkClient: networkClient)  // Or use any other implementation
         let viewModel = WeatherAlertsViewModel(weatherService: webservice)
         window.rootViewController = UINavigationController(rootViewController: WeatherAlertListViewController(viewModel: viewModel))
         window.makeKeyAndVisible()
